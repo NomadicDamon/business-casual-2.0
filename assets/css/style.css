@@ -1,0 +1,23 @@
+:root {
+    --white:#fefefe;
+    --black:#1C1C1C;
+    --grey: #383838;
+    --blue:#80D8FF;
+    --purple:#A86EEB;
+    --yellow:#E6CC5F;
+    --pink: #FF6565;
+    --header-font: var(--body-font);
+    --body-font: Helvetica, san-serifs;
+    --standard-padding: clamp(20px, 1vw, 80px)
+}
+body {
+    background-color: var(--black);
+    font-family: var(--body-font);
+    color: var(--white);
+    display: grid;
+    min-height: 100vh;
+    padding: 0px;
+}
+.section {
+    padding: var(--standard-padding:)
+}
