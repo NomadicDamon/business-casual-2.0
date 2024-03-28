@@ -22,6 +22,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    font-weight: 200;
 }
 main {
     padding: var(--standard-padding) 40px;
@@ -137,6 +138,14 @@ footer{
     width: 90%;
     margin: 0 auto;
     gap: 40px;
+}
+.stack {
+    display: grid;
+}
+.stack > *{
+    grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: column;
 }
 @media (min-width: 700px) {
     /* Basic grid container */

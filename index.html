@@ -21,7 +21,7 @@
 </head>
 <body>
     <header>
-        <a class="logo-link-home" href="index.html" style="opacity: 0; z-index: -1;"><img alt="Business Casual Logo" width="260px" height="27px" src="assets/img/logo.svg" /></a>
+        <a class="logo-link-home" href="index.html" style="opacity: 0; z-index: -1;"><img alt="Business Casual Logo" width="450px" height="46px" src="assets/img/logo.svg" /></a>
         <a href="#" id="mobile-menu-trigger" onclick="toggleMobileMenu(); return false;">
             <svg id="hamburger" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702.32666015625 466.8876953125" width="30px" >
                 <rect y="213.443359375" width="702.32666015625" height="40" fill="#fff" stroke-width="0"/>
@@ -42,16 +42,21 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div class="section margin-top-auto margin-bottom-auto centered">
-            <img alt="Business Casual logo" src="assets/img/logo.svg" width="1400px" height="143px" />
-            <p class="med-text">You bring the spirit - We'll bring the noise</p>
+    <main class="stack">
+        <div  style="z-index: 1;">
+            <div class="section margin-top-auto margin-bottom-auto centered">
+                <img alt="Business Casual logo" src="assets/img/logo.svg" width="1400px" height="143px" />
+                <p class="med-text">You bring the spirit - We'll bring the noise</p>
+            </div>
+            <div class="section core-values constrained ">
+                <p>Not your average creative agency.</p>
+                <p>Our vision is rooted in utilizing observation, research, and philosophy to help our clients find their voices.</p>
+                <p>Our mission is to identify and understand challenges, map out creative solutions, and execute with surgical precision.</p>
+                <a href="work.html" aria-label="See Our Work"><img width="100px" height="100px" alt="right-arrow" src="assets/img/right-arrow.svg"/></a>
+            </div>
         </div>
-        <div class="section core-values constrained ">
-            <p>Not your average creative agency.</p>
-            <p>Our vision is rooted in utilizing observation, research, and philosophy to help our clients find their voices.</p>
-            <p>Our mission is to identify and understand challenges, map out creative solutions, and execute with surgical precision.</p>
-            <a href="work.html" aria-label="See Our Work"><img width="100px" height="100px" alt="right-arrow" src="assets/img/right-arrow.svg"/></a>
+        <div>
+            <video autoplay src="assets/video/background.mp4" style="margin: auto; width: 100%; opacity: .3;position: absolute; top: 0; left:0" muted loop></video>
         </div>
     </main>
     <footer style="opacity: 0; z-index: -1;">
