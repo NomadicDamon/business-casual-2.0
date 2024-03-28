@@ -120,6 +120,12 @@ footer{
     font-size: clamp(52px,3vw,142px);
     font-size: 90px;
 }
+.constrained {
+    max-width: 1400px;
+    width:80%;
+    margin: 0 auto;
+    gap: 40px;
+}
 .margin-top-auto {
     margin-top: auto;
 }
@@ -132,12 +138,6 @@ footer{
 }
 .flex {
     display: flex;
-}
-.constrained {
-    max-width: 1400px;
-    width: 90%;
-    margin: 0 auto;
-    gap: 40px;
 }
 .stack {
     display: grid;
