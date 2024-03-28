@@ -1,23 +1,213 @@
 :root {
-    --white:#fefefe;
-    --black:#1C1C1C;
+    --white: #fefefe;
+    --black: #1C1C1C;
     --grey: #383838;
-    --blue:#80D8FF;
-    --purple:#A86EEB;
-    --yellow:#E6CC5F;
+    --blue: #80D8FF;
+    --purple: #A86EEB;
+    --yellow: #E6CC5F;
     --pink: #FF6565;
     --header-font: var(--body-font);
-    --body-font: Helvetica, san-serifs;
-    --standard-padding: clamp(20px, 1vw, 80px)
+    --body-font: "Helvetica Neue", san-serifs;
+    --standard-padding: clamp(20px, 1vw, 80px);
 }
+
 body {
     background-color: var(--black);
     font-family: var(--body-font);
     color: var(--white);
-    display: grid;
-    min-height: 100vh;
+    min-height: 100%;
     padding: 0px;
+    font-size: clamp(16px,1vw,32px);
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
-.section {
-    padding: var(--standard-padding:)
+main {
+    padding: var(--standard-padding) 40px;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    max-width: 100%;
+}
+
+/*menu css*/
+.menu-container {
+    position: absolute;
+    float: left;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: var(--white);
+    transition: opacity .7s;
+    opacity: 0;
+    z-index: -9;
+    width: 100%;
+}
+
+.mobile-menu-active .menu-container {
+    opacity: 1;
+    z-index: 9;
+}
+
+body.mobile-menu-active {
+    overflow: hidden;
+}
+
+#main-menu {
+    overflow: auto;
+    font-size: 10vw;
+    height: 100%;
+}
+#mobile-menu-trigger {
+    z-index: 10;
+    position: relative;
+}
+.mobile-menu-active #mobile-menu-trigger rect {
+    fill: var(--black);
+    transition: .5s;
+}
+.mobile-menu-active #mobile-menu-trigger rect:first-child {
+    transform: scalex(0);
+}
+.mobile-menu-active #mobile-menu-trigger rect:nth-child(2) {
+    transform: rotate(45deg);
+}
+.mobile-menu-active #mobile-menu-trigger rect:last-child {
+    transform: rotate(-45deg) translate(-50%, -20%);
+}
+svg {
+    overflow: visible;
+}
+.logo-link-home {
+    margin-right: auto;
+    max-width: 80%;
+}
+.menu-slogan {
+    color: var(--black);
+    font-size: 16px;
+    margin: 0px 40px;
+}
+img.logo-black {
+    margin: 40% 40px 0;
+    max-width: calc(100% - 80px);
+}
+footer,
+header {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+}
+footer{
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+#main-menu ul a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 200;
+    font-size: 52px;
+}
+.med-text {
+    font-size: clamp(35px,2.2vw,62px);
+    font-weight: 200;
+}
+.large-text {
+    font-size: clamp(52px,3vw,142px);
+    font-size: 90px;
+}
+.margin-top-auto {
+    margin-top: auto;
+}
+.margin-bottom-auto {
+    margin-bottom: auto;
+}
+.centered {
+    text-align: center;
+    justify-content: center;
+}
+.flex {
+    display: flex;
+}
+.constrained {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 40px;
+}
+@media (min-width: 700px) {
+    /* Basic grid container */
+    .section {
+        display: grid;
+        gap: var(--standard-padding:);
+        /* Adjust space between items */
+        padding: var(--standard-padding:) 0;
+        /* Adjust the margin around the grid */
+    }
+
+    /* For 2 columns */
+    .grid-2-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* For 3 columns */
+    .grid-3-columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* For 4 columns */
+    .grid-4-columns {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* For auto columns */
+    .grid-auto-columns {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--standard-padding);
+    }
+    footer{
+        flex-direction: row;
+    }
+    .logo-black,
+    .menu-slogan {
+        display: none;
+    }
+    .core-values {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr clamp(60px,4vw,100px);
+    }
+    .core-values p {
+        margin-top: 0;
+    }
+    .menu-container {
+        position: relative;
+        float: none;
+        opacity: 1;
+        background: transparent;
+        color: var(--white);
+        width: auto;
+        z-index: 9;
+    }
+    #main-menu {
+        font-size: 16px;
+    }
+    #main-menu ul {
+        list-style:none;
+        display: flex;
+        gap: 3vw;
+    }
+    #mobile-menu-trigger {
+        display: none;
+    }
+    #main-menu a {
+        color: var(--white);
+        text-decoration: none;
+    }
+    #main-menu ul a {
+        font-size: clamp(16px,1vw,32px);
+        color: var(--white);
+    }
 }
