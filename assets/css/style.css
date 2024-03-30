@@ -11,26 +11,38 @@
     --standard-padding: clamp(20px, 1vw, 80px);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--black);
     font-family: var(--body-font);
     color: var(--white);
     min-height: 100%;
     padding: 0px;
-    font-size: clamp(16px,1vw,32px);
+    font-size: clamp(18px, 1vw, 32px);
+    line-height: 1.2;
     min-height: 100vh;
     margin: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-weight: 200;
 }
+
+p {
+    line-height: 1.4;
+}
+
 main {
     padding: var(--standard-padding) 40px;
     display: flex;
     flex-direction: column;
 }
+
 img {
     max-width: 100%;
+    height: auto;
 }
 
 /*menu css*/
@@ -62,99 +74,222 @@ body.mobile-menu-active {
     font-size: 10vw;
     height: 100%;
 }
+
 #mobile-menu-trigger {
     z-index: 10;
     position: relative;
 }
+
 .mobile-menu-active #mobile-menu-trigger rect {
     fill: var(--black);
     transition: .5s;
 }
+
 .mobile-menu-active #mobile-menu-trigger rect:first-child {
     transform: scalex(0);
 }
+
 .mobile-menu-active #mobile-menu-trigger rect:nth-child(2) {
     transform: rotate(45deg);
 }
+
 .mobile-menu-active #mobile-menu-trigger rect:last-child {
     transform: rotate(-45deg) translate(-50%, -20%);
 }
+
 svg {
     overflow: visible;
 }
+
 .logo-link-home {
     margin-right: auto;
     max-width: 80%;
 }
+
 .menu-slogan {
     color: var(--black);
     font-size: 16px;
     margin: 0px 40px;
 }
+
 img.logo-black {
     margin: 40% 40px 0;
     max-width: calc(100% - 80px);
 }
+
 footer,
 header {
     display: flex;
     padding: 40px;
     align-items: center;
 }
-footer{
+
+footer {
     justify-content: space-between;
     flex-direction: column;
     gap: 20px;
 }
+
 #main-menu ul a {
     text-decoration: none;
     color: var(--black);
     font-weight: 200;
     font-size: 52px;
 }
+
 .med-text {
-    font-size: clamp(35px,2.2vw,62px);
+    font-size: clamp(35px, 2.2vw, 62px);
     font-weight: 200;
 }
+
+h1,
 .large-text {
-    font-size: clamp(52px,3vw,142px);
+    font-size: clamp(52px, 3vw, 142px);
     font-size: 90px;
+    font-weight: 200;
 }
+
+.very-large-text {
+    font-size: clamp(92px, 14vw, 242px);
+    margin: 0;
+    line-height: 1;
+}
+
 .constrained {
     max-width: 1400px;
-    width:80%;
+    width: 80%;
     margin: 0 auto;
     gap: 40px;
 }
+
 .margin-top-auto {
     margin-top: auto;
 }
+
 .margin-bottom-auto {
     margin-bottom: auto;
 }
+
 .centered {
     text-align: center;
     justify-content: center;
 }
-.flex {
+
+.flex-row {
     display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--standard-padding) * 3);
 }
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.acenter {
+    align-items: center;
+}
+
+.astart {
+    align-items: flex-start;
+}
+
+.aend {
+    align-items: flex-end;
+}
+
+.jcenter {
+    justify-content: center;
+}
+
+.jstart {
+    justify-content: flex-start;
+}
+
+.jend {
+    justify-content: flex-end;
+}
+
 .stack {
     display: grid;
 }
-.stack > *{
+
+.stack>* {
     grid-area: 1/1/2/2;
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 700px) {
+
+.work h1 span {
+    display: block;
+}
+
+.work h1 span {
+    display: block;
+}
+
+.work h1 strong {
+    font-weight: 900;
+    font-style: italic;
+}
+
+.button {
+    border: 2px solid;
+    padding: 10px 25px;
+    margin: 20px auto 20px 0;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.branded-section {
+    background: url(../img/branded-background.webp);
+    background-size: auto;
+    background-size: cover;
+}
+
+.branded-section img {
+    max-width: 45vw;
+}
+.adult-swim-section {
+    background: url(../img/adult-swim-background.webp) no-repeat bottom center #010101;
+    background-size: 100%;
+}
+.liveonNY-section {
+    background: url(../img/liveonimage-background.webp) no-repeat top center #010101;
+    background-size: 100%;
+}
+.rochelle-jordan-section {
+    background-color: #010101; 
+}
+.liveonNY-section .content {
+    margin: 67vw 8vw 10vw;    
+}
+.adult-swim-section .content {
+  margin: 10vw 8vw 67vw;
+}
+
+.standard-padding {
+    padding: var(--standard-padding);
+}
+
+
+.breakout {
+    margin-right: calc(-50vw + 50%);
+    margin-left: calc(-50vw + 50%);
+}
+.breakout.section {
+    padding-right: 0;
+    padding-left: 0;
+ }
+ .section {
+    padding: calc(var(--standard-padding) * 2) var(--standard-padding);
+ }
+@media (min-width: 800px) {
+
     /* Basic grid container */
     .section {
         display: grid;
-        gap: var(--standard-padding:);
-        /* Adjust space between items */
-        padding: var(--standard-padding:) 0;
-        /* Adjust the margin around the grid */
+        gap: var(--standard-padding);
     }
 
     /* For 2 columns */
@@ -177,20 +312,25 @@ footer{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: var(--standard-padding);
     }
-    footer{
+
+    footer {
         flex-direction: row;
     }
+
     .logo-black,
     .menu-slogan {
         display: none;
     }
+
     .core-values {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr clamp(60px,4vw,100px);
+        grid-template-columns: 1fr 1fr 1fr clamp(60px, 4vw, 100px);
     }
+
     .core-values p {
         margin-top: 0;
     }
+
     .menu-container {
         position: relative;
         float: none;
@@ -200,23 +340,45 @@ footer{
         width: auto;
         z-index: 9;
     }
+
     #main-menu {
         font-size: 16px;
     }
+
     #main-menu ul {
-        list-style:none;
+        list-style: none;
         display: flex;
         gap: 3vw;
     }
+
     #mobile-menu-trigger {
         display: none;
     }
+
     #main-menu a {
         color: var(--white);
         text-decoration: none;
     }
+
     #main-menu ul a {
-        font-size: clamp(16px,1vw,32px);
+        font-size: clamp(16px, 1vw, 32px);
         color: var(--white);
+    }
+
+    .liveonNY-section .content {
+        margin: 24vw 4vw 8vw 18vw;
+    }
+    .adult-swim-section .content {
+        margin: 27vw 8vw 10vw;
+    }
+
+    .branded-section .content {
+        margin-right: 8vw;
+        margin-left: 8vw;
+    }
+    .liveonNY-section,
+    .adult-swim-section {
+        background-size: cover;
+        background-position: 60% center;
     }
 }
