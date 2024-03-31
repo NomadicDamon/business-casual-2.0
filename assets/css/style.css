@@ -297,6 +297,13 @@ h1,
  .section {
     padding: calc(var(--standard-padding) * 2) var(--standard-padding);
  }
+ .full-height-section {
+    display: flex !important;
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ }
  .down-link {
     display: none;
  }
