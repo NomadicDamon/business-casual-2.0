@@ -151,7 +151,7 @@ h1,
 }
 
 .very-large-text {
-    font-size: clamp(92px, 14vw, 242px);
+    font-size: clamp(92px, 10vw, 242px);
     margin: 0;
     line-height: 1;
 }
