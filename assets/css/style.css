@@ -302,6 +302,7 @@ h1,
  }
  .section.hero-section {
     min-height: 80vh;
+    padding: 0px !important;
 }
 @media (min-width: 800px) {
     .down-link {
