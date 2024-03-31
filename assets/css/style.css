@@ -300,6 +300,9 @@ h1,
  .down-link {
     display: none;
  }
+ .section.hero-section {
+    min-height: 80vh;
+}
 @media (min-width: 800px) {
     .down-link {
         display: inline-block;
