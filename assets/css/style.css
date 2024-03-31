@@ -246,6 +246,7 @@ h2 {
 h2 strong,
 h1 strong {
     font-style: italic;
+    font-weight: 900;
 }
 
 ul {
