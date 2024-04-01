@@ -42,8 +42,33 @@
             </nav>
         </div>
     </header>
-    <main>
-        <p>foo</p>
+    <main class="constrained">
+        <h1 style="margin-bottom:0" class="centered">How can we help you?</h1>
+        <p class="centered">Please fill out the form below to get in touch with us. Somebody will reach out within 24hrs.</p>
+        <form action="submit_form_endpoint" method="post">
+            <div class="grid-2-columns">
+                <label for="fullname" style="position: absolute; left: -1000em;">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                <label for="company" style="position: absolute; left: -1000em;">Company:</label>
+                <input type="text" id="company" name="company" placeholder="Company">
+            </div>
+            <div class="grid-2-columns">
+                <label for="email" style="position: absolute; left: -1000em;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="phone" style="position: absolute; left: -1000em;">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+            </div>
+            <div class="flex-column">
+                <label for="message" style="position: absolute; left: -1000em;">Leave a Message:</label>
+                <input type="text" id="message" name="message" placeholder="Leave a Message">
+            </div>
+            <div class="submit-row">
+                <div>
+                    <label for="mailinglist" style="position: absolute; left: -1000em;">Add me to the mailing list</label>
+                <input type="checkbox" id="mailinglist" name="mailinglist" checked> Add me to the mailing list  </div>     
+                <input type="submit" value="Submit" >
+            </div>
+        </form>
     </main>
     <footer>
         <div class="copywrite">© <span>2024</span> Business Casual</div>
