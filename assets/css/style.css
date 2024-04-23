@@ -136,6 +136,11 @@ svg {
     max-width: 80%;
 }
 
+.large-logo {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 .home-page .logo-link-home {
     opacity: 0;
     z-index: -1;
