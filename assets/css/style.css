@@ -550,6 +550,11 @@ body.loaded .four-color-boxes .stack>div:nth-child(1) h2 {
     grid-area: 2/1/3/3;
 }
 
+.services-table-row p strong {
+    font-size: 1.17em;
+font-weight: bold;
+}
+
 .services-table-row p,
 .services-table-row h3 {
     margin-top: 0;
